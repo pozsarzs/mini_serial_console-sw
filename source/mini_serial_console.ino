@@ -138,7 +138,7 @@ String msg[14]                  =
 };
 
 #ifdef ARDUINO_ARCH_MBED_RP2040
-UART Serial2(com_rxd2, com_txd, NC, NC);
+UART Serial2(com_rxd2, com_txd2, NC, NC);
 #endif
 
 #ifdef LCD_8BIT
