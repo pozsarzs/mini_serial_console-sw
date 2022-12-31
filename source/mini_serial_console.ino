@@ -436,7 +436,7 @@ byte getmode() {
 // initializing
 void setup() {
   String s;
-  // set USB serial port
+  // serial ports
   delay(3000);
   Serial.begin(com_speed[0]);
   Serial1.begin(com_speed[1]);
@@ -488,10 +488,7 @@ void setup() {
   }
   delay(3000);
   lcd.clear();
-  // serial ports
   com_writetoconsole(msg[7]);
-  Serial1.begin(com_speed[1]);
-  Serial2.begin(com_speed[2]);
   for (int b = 0; b <= 2; b++) {
     s = "#" + String(b) + ": " + String(com_speed[b]) + " b/s";
     com_writetoconsole("   " + s);
